@@ -6,9 +6,14 @@
   "author": "Brian Link <cpsubrian@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "NODE_ENV=test lab --verbose --colors --debug --coverage --threshold 85",
+    "test-cov-html": "lab -r html -o coverage.html"
   },
   "dependencies": {
     "hapi": "^16.0.1"
+  },
+  "devDependencies": {
+    "lab": "^11.2.1"
   }
 }
