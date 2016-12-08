@@ -1,0 +1,14 @@
+{
+  "name": "deployment-testing",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "git@github.com:TerraEclipse/deployment-testing.git",
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "hapi": "^16.0.1"
+  }
+}
