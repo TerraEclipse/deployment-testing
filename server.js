@@ -1,13 +1,11 @@
 const Hapi = require('hapi')
+const config = require('getconfig')
 
 // Create a server with a host and port
 const server = module.exports = new Hapi.Server()
 
 // Connection
-server.connection({
-  host: 'localhost',
-  port: 8000
-})
+server.connection(config.server.connection)
 
 // Routes
 server.route({

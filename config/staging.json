@@ -1,0 +1,8 @@
+{
+  "server": {
+    "connection": {
+      "host": "localhost",
+      "port": 80
+    }
+  }
+}

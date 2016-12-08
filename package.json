@@ -11,6 +11,7 @@
     "test-cov-html": "lab -r html -o coverage.html"
   },
   "dependencies": {
+    "getconfig": "^3.0.0",
     "hapi": "^16.0.1"
   },
   "devDependencies": {

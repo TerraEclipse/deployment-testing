@@ -485,6 +485,10 @@ generate-object-property@^1.1.0:
   dependencies:
     is-property "^1.0.0"
 
+getconfig@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/getconfig/-/getconfig-3.0.0.tgz#e74ca2581d5ec805f8778e1236569453a0f0ae1d"
+
 glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
