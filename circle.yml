@@ -32,5 +32,6 @@ deployment:
           s3_location:
             bucket: terraeclipse.codedeploy
             key_pattern: apps/deployment-testing/{BRANCH}/deployment-testing-{BUILD_NUM}-{SHORT_COMMIT}
+        region: us-west-1
         deployment_group: deployment-testing
         deployment_config: CodeDeployDefault.AllAtOnce
