@@ -28,7 +28,7 @@ deployment:
       deployment-testing:
         application_root: /
         revision_location:
-          regision_type: s3
+          revision_type: S3
           s3_location:
             bucket: terraeclipse.codedeploy
             key_pattern: apps/deployment-testing/{BRANCH}/deployment-testing-{BUILD_NUM}-{SHORT_COMMIT}
