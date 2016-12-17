@@ -1,5 +1,5 @@
 #!/bin/bash
 echo 'ApplicationStart'
 
-# Start application via upstart.
-service deployment-testing start
+# Start application via upstart (don't care if it works).
+service deployment-testing start || true
