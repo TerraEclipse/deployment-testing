@@ -21,3 +21,16 @@ dependencies:
 test:
   override:
     - yarn test
+deployment:
+  staging:
+    branch: staging
+    codedeploy:
+      deployment-testing:
+        application_root: /
+        revision_location:
+          regision_type: s3
+          s3_location:
+            bucket: terraeclipse.codedeploy
+            key_pattern: apps/deployment-testing/{BRANCH}/deployment-testing-{BUILD_NUM}-{SHORT_COMMIT}
+        deployment_group: deployment-testing
+        deployment_config: CodeDeployDefault.AllAtOnce

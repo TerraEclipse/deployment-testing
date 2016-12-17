@@ -1,0 +1,38 @@
+version: 0.0
+os: linux
+files:
+  - source:
+    destination: /home/ubuntu/deployment-testing
+  - source: deploy/deployment-testing.conf
+    destination: /etc/init/deployment-testing.conf
+permissions:
+  - object: /home/ubuntu/deployment-testing
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 664
+    type:
+      - file
+      - directory
+  - object: /etc/init/deployment-testing.conf
+    owner: root
+    group: root
+    mode: 664
+    type:
+      - file
+hooks:
+  ApplicationStop:
+    - location: deploy/ApplicationStop.sh
+      runas: root
+  BeforeInstall:
+    - location: deploy/BeforeInstall.sh
+      runas: root
+  AfterInstall:
+    - location: deploy/AfterInstall.sh
+      runas: root
+  ApplicationStart:
+    - location: deploy/ApplicationStart.sh
+      runas: root
+  ValidateService:
+    - location: deploy/ValidateService.sh
+      runas: root
