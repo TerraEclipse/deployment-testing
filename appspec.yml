@@ -5,6 +5,27 @@ files:
     destination: /home/ubuntu/deployment-testing
   - source: deploy/deployment-testing.conf
     destination: /etc/init
+permissions:
+  - object: /home/ubuntu/deployment-testing
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 664
+    type:
+      - file
+  - object: /home/ubuntu/deployment-testing
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+    mode: 775
+    type:
+      - directory
+  - object: /etc/init/deployment-testing.conf
+    owner: root
+    group: root
+    mode: 664
+    type:
+      - file
 hooks:
   ApplicationStop:
     - location: deploy/ApplicationStop.sh
